@@ -37,6 +37,7 @@ nav {
   background-color: var(--heading-color);
   position: fixed;
   width: 100%;
+  z-index: 1;
 }
 
 #nav-list {
@@ -95,7 +96,7 @@ main {
 }
 
 #projects {
-  width: 80%;
+  width: 100%;
 }
 
 #projects h2 {
@@ -111,7 +112,9 @@ main {
 #project-images {
   display: flex;
   flex-wrap: wrap;
-  gap: 200px;
+  justify-content: space-evenly;
+  gap: 250px;
+  align-items: center;
   justify-content: center;
   padding: 100px 0;
 }
@@ -131,21 +134,33 @@ figcaption {
   width: 300px;
 }
 
-figure {
+figure, .button {
+  transition: 150ms ease-in;
   box-shadow: 0px 10px 13px -7px #000000, 5px 5px 11px 11px rgba(0, 0, 0, 0);
 }
 
-#show-all {
-  width: 5%;
-  margin: 0 auto;
+figure:hover, .button:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+} 
+
+figure:active, .button:active  {
+  transform:translateY(0.3rem);
+  box-shadow: none;
+}
+
+.button {
+  display: block;
+  width: 8%;
   text-align: center;
-  padding: 20px;
+  margin: 0 auto;
+  font-family: var(--secondary-font);
+  font-size: 18px;
+  font-weight: 300;
+  color: var(--main-text);
   background-color: var(--heading-color);
   box-shadow: 0px 10px 13px -7px #000000, 5px 5px 11px 11px rgba(0, 0, 0, 0);
-}
-
-#show-all a {
-  color: var(--main-text);
+  padding: 20px;
 }
 
 #contact {
@@ -179,6 +194,10 @@ figure {
   color: var(--secondary-text);
 }
 
+.social i:hover {
+  color: var(--accent);
+}
+
 footer {
   height: 100px;
   background-color: var(--heading-color);
@@ -194,4 +213,11 @@ footer p {
 
 footer i {
   font-size: 18px;
+}
+
+
+@media screen and (max-width: 1000px) {
+    nav {
+      display: none;
+    }
 }
