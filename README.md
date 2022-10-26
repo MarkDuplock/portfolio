@@ -1,6 +1,8 @@
 # Web Developer Portfolio
 ## A FreeCodeCamp Project
 
+https://markduplock.github.io/portfolio/
+
 * Your portfolio should have a welcome section with an id of welcome-section
 * The welcome section should have an h1 element that contains text
 * Your portfolio should have a projects section with an id of projects
